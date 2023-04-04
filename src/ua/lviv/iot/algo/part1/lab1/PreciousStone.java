@@ -7,17 +7,25 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class PreciousStone {
-    private String name;
+public class PreciousStone extends Stone {
     private int carat;
-    private String color;
     private int clarity;
     private int pricePerCarat;
-
+    private String color;
+    private String shape;
     private static PreciousStone defaultPreciousStone = new PreciousStone();
 
     public static PreciousStone getInstance() {
         return defaultPreciousStone;
+    }
+
+    PreciousStone(String color, int clarity) {
+        this.setColor(color);
+        this.clarity = clarity;
+    }
+
+    PreciousStone(String name) {
+        this.setName(name);
     }
 
     public int getTotalPrice(int pricePerCarat, int carat) {
@@ -35,19 +43,13 @@ public class PreciousStone {
         pricePerCarat *= (1 + percentage / 100);
     }
 
-    public static void main(String[] args) {
-
-        PreciousStone[] stones = {
-                new PreciousStone(),
-                new PreciousStone("Diamond", 50, "green", 3, 150),
-                PreciousStone.getInstance(),
-                PreciousStone.getInstance()
-        };
-
-        for (var stone : stones) {
-            System.out.println(stone);
-        }
+    public int getFullPrice() {
+        int fullPrice = carat * pricePerCarat;
+        return fullPrice;
     }
+
 }
+
+
 
 
