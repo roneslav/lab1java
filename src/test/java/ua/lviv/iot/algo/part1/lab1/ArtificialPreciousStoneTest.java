@@ -1,16 +1,25 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import static org.junit.Assert.assertEquals;
 
 public class ArtificialPreciousStoneTest {
-
     @Test
     public void testGetFullPrice() {
-        ArtificialPreciousStone artificialPreciousStone = new ArtificialPreciousStone();
-        artificialPreciousStone.setMassInGrams(5);
-        artificialPreciousStone.setPricePerGram(10);
-        Assertions.assertEquals(50, artificialPreciousStone.getFullPrice());
+        String expectedNameOfLaboratory = "Biolab";
+        int expectedMassInGrams = 5;
+        int expectedPricePerGram = 10;
+        String expectedColor = "green";
+        String expectedShape = "circle";
+
+        ArtificialPreciousStone artificialPreciousStone = new ArtificialPreciousStone
+                (expectedNameOfLaboratory, expectedMassInGrams, expectedPricePerGram, expectedColor, expectedShape);
+
+        assertEquals(50, artificialPreciousStone.getFullPrice());
+        assertEquals(expectedMassInGrams, artificialPreciousStone.getMassInGrams());
+        assertEquals(expectedNameOfLaboratory, artificialPreciousStone.getNameOfLaboratory());
+        assertEquals(expectedColor, artificialPreciousStone.getColor());
+        assertEquals(expectedShape, artificialPreciousStone.getShape());
+        assertEquals(expectedPricePerGram, artificialPreciousStone.getPricePerGram());
     }
 }

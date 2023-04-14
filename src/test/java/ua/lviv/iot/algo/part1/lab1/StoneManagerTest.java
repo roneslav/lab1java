@@ -1,10 +1,7 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.Test;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StoneManagerTest {
