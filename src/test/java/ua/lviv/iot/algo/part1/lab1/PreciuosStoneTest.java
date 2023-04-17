@@ -1,6 +1,8 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 public class PreciuosStoneTest {
     @Test
@@ -36,5 +38,19 @@ public class PreciuosStoneTest {
     public void testGetFullPrice(){
         PreciuosStone preciuosStone = new PreciuosStone();
         assertEquals(0, preciuosStone.getFullPrice());
+    }
+    @Test
+    public void testToCSV() {
+        PreciuosStone preciuosStone = new PreciuosStone(100, 5, 35, "green", "circle");
+        String expectedCSV = "null,null,null,100,5,35,green,circle\n";
+        String actualCSV = preciuosStone.toCSV();
+        assertEquals(expectedCSV, actualCSV);
+    }
+    @Test
+    public void testGetHeaders() {
+        PreciuosStone preciuosStone = new PreciuosStone(100, 5, 35, "green", "circle");
+        String expectedHeaders = "name,color,shape,carat,clarity,pricePerCarat,color,shape\n";
+        String actualHeaders = preciuosStone.getHeaders();
+        assertEquals(expectedHeaders, actualHeaders);
     }
 }

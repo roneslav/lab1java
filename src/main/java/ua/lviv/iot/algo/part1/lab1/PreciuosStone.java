@@ -1,9 +1,11 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import lombok.*;
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class PreciuosStone extends Stone {
     private int carat;
     private int clarity;
@@ -26,5 +28,12 @@ public class PreciuosStone extends Stone {
         int fullPrice = carat * pricePerCarat;
         return fullPrice;
     }
-
+    public String toCSV(){
+        return super.toCSV() + "," + carat + ","
+                + clarity + "," + pricePerCarat + "," + color + "," + shape + "\n";
+    }
+    public String getHeaders() {
+        return super.getHeaders() + "," + "carat" + ","
+                + "clarity" + "," + "pricePerCarat" + "," + "color" + "," + "shape" + "\n";
+    }
 }
