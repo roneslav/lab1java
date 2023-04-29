@@ -1,19 +1,19 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.modules;
 
-import lombok.*;
-@NoArgsConstructor
-@AllArgsConstructor
+import lombok.Getter;
+
 @Getter
-@Setter
-@ToString
 public abstract class Stone {
     private String name;
     private String color;
     private String shape;
+
     public abstract int getFullPrice();
-    public String toCSV(){
+
+    public String toCSV() {
         return name + "," + color + "," + shape;
     }
+
     public String getHeaders() {
         return "name" + "," + "color" + "," + "shape";
     }

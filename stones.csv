@@ -1,0 +1,16 @@
+name,color,shape,carat,clarity,pricePerCarat,color,shape
+null,null,null,100,5,35,green,circle
+name,color,shape,carat,clarity,pricePerCarat,color,shape
+null,null,null,55,4,25,blue,square
+name,color,shape,nameOfLaboratory,massInGrams,pricePerGram,color,shape
+null,null,null,BioLab,5,25,grey,circle
+name,color,shape,nameOfLaboratory,massInGrams,pricePerGram,color,shape
+null,null,null,OpenLab,10,55,green,triangle
+name,color,shape,name,color,shape
+null,null,null,Diamond,red,square
+name,color,shape,name,color,shape
+null,null,null,Smaragd,green,circle
+name,color,shape,color,shape
+null,null,null,pink,trapezium
+name,color,shape,color,shape
+null,null,null,white,cone

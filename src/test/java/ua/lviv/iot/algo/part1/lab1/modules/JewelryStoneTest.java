@@ -1,6 +1,7 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.modules;
 
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class JewelryStoneTest {
@@ -17,6 +18,7 @@ public class JewelryStoneTest {
         assertEquals(expectedColor, jewelryStone.getColor());
         assertEquals(expectedShape, jewelryStone.getShape());
     }
+
     @Test
     public void testToCSV() {
         JewelryStone jewelryStone = new JewelryStone("Diamond", "red", "square");
@@ -24,6 +26,7 @@ public class JewelryStoneTest {
         String actualCSV = jewelryStone.toCSV();
         assertEquals(expectedCSV, actualCSV);
     }
+
     @Test
     public void testGetHeaders() {
         JewelryStone jewelryStone = new JewelryStone("Diamond", "red", "square");

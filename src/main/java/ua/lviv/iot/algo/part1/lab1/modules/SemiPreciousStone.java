@@ -1,12 +1,10 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.modules;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-@NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
-@ToString
 public class SemiPreciousStone extends Stone {
     private String color;
     private String shape;
@@ -14,9 +12,11 @@ public class SemiPreciousStone extends Stone {
     public int getFullPrice() {
         return 0;
     }
-    public String toCSV(){
+
+    public String toCSV() {
         return super.toCSV() + "," + color + "," + shape + "\n";
     }
+
     public String getHeaders() {
         return super.getHeaders() + "," + "color" + "," + "shape" + "\n";
     }

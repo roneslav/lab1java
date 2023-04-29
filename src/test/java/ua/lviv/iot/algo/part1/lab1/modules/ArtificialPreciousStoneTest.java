@@ -1,10 +1,6 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.modules;
 
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-
-import java.io.IOException;
-
 import static org.junit.Assert.assertEquals;
 
 public class ArtificialPreciousStoneTest {
